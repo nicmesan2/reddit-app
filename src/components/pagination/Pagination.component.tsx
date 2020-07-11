@@ -26,7 +26,6 @@ const PaginationComponent = (props) => {
       background-color: white;
 
       & a {
-        text-decoration: none;
         color: black;
 
         :hover {

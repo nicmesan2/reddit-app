@@ -13,18 +13,19 @@ import {
   BookmarkImage,
   UnbookmarkImage,
   RemovePost,
+  ImageInterface,
   ReadPost,
   PostsInterface
 } from './topList.types'
 
-export const bookmarkImage = (postId: string, imageLink: string): BookmarkImage => ({
+export const bookmarkImage = (postId: string, image: ImageInterface): BookmarkImage => ({
   type: BOOKMARK_IMAGE,
-  payload: { postId, imageLink}
+  payload: { postId, image}
 })
 
-export const unbookmarkImage = (postId: string, imageLink: string): UnbookmarkImage => ({
+export const unbookmarkImage = (postId: string, image: ImageInterface): UnbookmarkImage => ({
   type: UNBOOKMARK_IMAGE,
-  payload: { postId, imageLink}
+  payload: { postId, image }
 })
 
 export const readPost = (postId: string): ReadPost => ({
@@ -71,7 +72,13 @@ export const fetchTopPosts = () => (dispatch) => {
             commentsNumber: post.num_comments,
             clicked: post.clicked,
             // Format url correctly
-            imageLink: post.preview?.images[0]?.source?.url.split('amp;').join('')
+            image: {
+              src: post.preview?.images[0]?.source?.url.split('amp;').join(''),
+              thumbnail: post.thumbnail,
+              thumbnailHeight: post.thumbnail_height,
+              thumbnailWidth: post.thumbnail_width
+            }
+            
           }
         }
       }, {})

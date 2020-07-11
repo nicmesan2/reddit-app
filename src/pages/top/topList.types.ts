@@ -1,3 +1,7 @@
+export interface ImageInterface {
+  src: string, thumbnail: string, thumbnailHeight: number, thumbnailWidth: number
+}
+
 export interface PostInterface {
   imageBookmarked: boolean
   clicked: boolean
@@ -6,6 +10,7 @@ export interface PostInterface {
   author: string
   comments: number
   title: string
+  image: ImageInterface
 }
 
 export interface PostsInterface {
@@ -21,7 +26,7 @@ export interface TopListState {
   readPosts: string[]
   bookmarkedImages: Array<{
     postId: string
-    imageLink: string
+    image: ImageInterface
   }>
 }
 
@@ -35,12 +40,12 @@ export const UNBOOKMARK_IMAGE = '@top/UNBOOKMARK_IMAGE'
 
 export interface BookmarkImage {
   type: typeof BOOKMARK_IMAGE,
-  payload: { postId: string, imageLink: string}
+  payload: { postId: string, image: ImageInterface}
 }
 
 export interface UnbookmarkImage {
   type: typeof  UNBOOKMARK_IMAGE,
-  payload: { postId: string, imageLink: string}
+  payload: { postId: string, image: ImageInterface}
 }
 
 export interface ReadPost {

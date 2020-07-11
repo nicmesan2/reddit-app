@@ -2,20 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import moment from 'moment'
 import { Placeholder, IconButton } from '..'
+import { ImageInterface } from '../../pages/top/topList.types'
 
 interface PostProps {
   id?: string
   createdTime?: number
   title?: string
   author?: string
-  thumbnail?: string
   commentsNumber?: string
   clicked?: boolean
   isLoading?: boolean
-  imageLink?: string
+  image?: ImageInterface
   onDeleteClick?: (postId?: string) => {}
   onPostClick?: (postId?: string) => {}
-  onSave?: (postId?: string, imageLink?: string) => {}
+  onSave?: (postId?: string, image?: ImageInterface) => {}
   imageBookmarked?: boolean
 }
 
@@ -38,8 +38,8 @@ const Container = styled.div`
 
 const Thumbnail = styled.img`
   display: flex;
-  flex: 0 0 80px;
   height: 60px;
+  width: 80px;
 `
 const PostInfo = styled.div`
   justify-content: space-between;
@@ -53,7 +53,6 @@ const Title = styled.h3`
   color: ${(props) => (props.clicked ? 'grey' : '#222222')};
   display: inline;
   position: relative;
-  text-decoration: none;
   word-break: break-word;
 `
 
@@ -75,41 +74,42 @@ const PostComponent: React.FC<PostProps> = ({
   title,
   id,
   author,
-  thumbnail,
   commentsNumber,
   clicked,
   onDeleteClick,
   onSave,
   onPostClick,
-  imageLink,
+  image,
   imageBookmarked,
   isLoading = false
 }) => {
-  const handleDeleteClick = () => {
+  const handleDeleteClick = e => {
+    e.stopPropagation()
     if (onDeleteClick) {
       onDeleteClick(id)
     }
   }
 
-  const handlePostClick = () => {
+  const handlePostClick = e => {
     if (onPostClick) {
       onPostClick(id)
     }
   }
 
-  const handleSave = () => {
+  const handleSave = e => {
+    e.stopPropagation()
     if (onSave) {
-      onSave(id, imageLink)
+      onSave(id, image)
     }
   }
-
+  
   return (
     <Container onClick={handlePostClick}>
       {isLoading ? (
         <Placeholder width={80} height={60} />
       ) : (
-        <a href={imageLink} rel="noreferrer" target="_blank">
-          <Thumbnail src={thumbnail} alt={title} />
+        <a href={image?.src} rel="noreferrer" target="_blank">
+          <Thumbnail src={image?.thumbnail} alt={title} />
         </a>
       )}
       <PostInfo>

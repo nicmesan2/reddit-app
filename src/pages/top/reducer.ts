@@ -114,7 +114,7 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
             }
           }
         },
-        bookmarkedImages: [...state.bookmarkedImages, { ...action.payload }]
+        bookmarkedImages: [...state.bookmarkedImages, action.payload ]
       }
     }
     
@@ -131,7 +131,7 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
             }
           }
         },
-        bookmarkedImages: state.bookmarkedImages.filter(image => image.imageLink !== action.payload.imageLink)
+        bookmarkedImages: state.bookmarkedImages.filter(bookmark => bookmark.image.src !== action.payload.image.src)
       }
     }
 

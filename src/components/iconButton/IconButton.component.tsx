@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBan, faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { faBan, faBookmark, faCamera, faChartLine } from '@fortawesome/free-solid-svg-icons'
 
 const iconsNames = {
   ban: faBan,
-  bookmark: faBookmark
+  bookmark: faBookmark,
+  camera: faCamera,
+  chart: faChartLine
 }
 const StyledButton = styled.button`
   color: ${props => props.color};
@@ -26,7 +28,7 @@ const StyledButton = styled.button`
     background-color: rgb(26, 26, 27, 0.1);
   }
 `
-const Button = ({ onClick, iconName, label, size = 12, color = 'grey' }) => (
+const Button = ({ onClick = (e) => {}, iconName, label, size = 12, color = 'grey' }) => (
   <StyledButton color={color} onClick={onClick}>
     {iconName ? <FontAwesomeIcon style={{ fontSize: size, marginRight: 3 }} icon={iconsNames[iconName]} /> : null}
     <span style={{ fontSize: size }}>{label}</span>

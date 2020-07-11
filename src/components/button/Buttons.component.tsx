@@ -10,7 +10,6 @@ const StyledButton = styled.button`
   box-sizing: border-box;
   text-align: center;
   letter-spacing: 1px;
-  text-decoration: none;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
