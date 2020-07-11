@@ -5,6 +5,7 @@ import {
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_REQUEST,
   REMOVE_POST,
+  READ_POST,
   TopListState,
   TopListActionTypes
 } from './topList.types'
@@ -46,6 +47,22 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
         posts: {
           ...state.posts,
           list: state.posts.list.filter(postId => postId !== action.payload)
+        }
+      }
+    }
+  
+    case READ_POST: {
+      return {
+        ...state,
+        posts: {
+          ...state.posts,
+          data: {
+            ...state.posts.data,
+            [action.payload]: {
+              ...state.posts.data[action.payload],
+              clicked: true
+            }
+          }
         }
       }
     }

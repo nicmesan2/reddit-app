@@ -14,6 +14,7 @@ interface PostProps {
   clicked?: boolean
   isLoading?: boolean
   onDeleteClick?: (string) => {}
+  onPostClick?: (string) => {}
 }
 
 const Container = styled.div`
@@ -22,16 +23,19 @@ const Container = styled.div`
   border: thin solid #ccc;
   display: flex;
   position: relative;
-  -ms-flex-direction: row;
   flex-direction: row;
   padding: 8px;
   margin-bottom: -1px;
   background-color: #ffffff;
+  
+  : hover {
+    border: thin solid black;
+    z-index: 1;
+  }
 `
 
 const Thumbnail = styled.img`
   display: flex;
-  -ms-flex: 0 0 80px;
   flex: 0 0 80px;
   height: 60px;
 `
@@ -44,7 +48,7 @@ const PostInfo = styled.div`
 
 const Title = styled.h3`
   font-size: 1.2rem;
-  color: #222222;
+  color: ${props => props.clicked ? 'grey' : '#222222'};
   display: inline;
   position: relative;
   text-decoration: none;
@@ -57,28 +61,9 @@ const PostAuthorInfo = styled.div`
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  -ms-flex-align: center;
   align-items: center;
 `
 
-const Comments = styled.div`
-  color: #787c7e;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
-  overflow: hidden;
-  padding: 0 8px 0 4px;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-`
-// eslint-disable-next-line @typescript-eslint/camelcase
 const PostComponent: React.FC<PostProps> = ({
   createdTime = 0,
   title,
@@ -88,6 +73,7 @@ const PostComponent: React.FC<PostProps> = ({
   commentsNumber,
   clicked,
   onDeleteClick,
+  onPostClick,
   isLoading = false
 }) => {
   const handleDeleteClick = () => {
@@ -95,12 +81,18 @@ const PostComponent: React.FC<PostProps> = ({
       onDeleteClick(id)
     }
   }
-
+  
+  const handlePostClick = () => {
+    if (onPostClick) {
+      onPostClick(id)
+    }
+  }
+  
   return (
-    <Container>
+    <Container onClick={handlePostClick}>
       {isLoading ? <Placeholder width={80} height={60} /> : <Thumbnail src={thumbnail} alt={title} />}
       <PostInfo>
-        {isLoading ? <Placeholder width={300} /> : <Title>{title}</Title>}
+        {isLoading ? <Placeholder width={300} /> : <Title clicked={clicked}>{title}</Title>}
         <PostAuthorInfo>
           {isLoading ? (
             <Placeholder width={200} />

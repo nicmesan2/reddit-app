@@ -21,7 +21,12 @@ export const FETCH_POSTS_REQUEST = '@top/FETCH_POST_REQUEST'
 export const FETCH_POSTS_SUCCESS = '@top/FETCH_POST_SUCCESS'
 export const FETCH_POSTS_FAILED = '@top/FETCH_POST_FAILED'
 export const REMOVE_POST = '@top/REMOVE_POST'
+export const READ_POST = '@top/READ_POST'
 
+export interface ReadPost {
+  type: typeof READ_POST,
+  payload: string
+}
 export interface RemovePost {
   type: typeof REMOVE_POST
   payload: string
@@ -41,4 +46,4 @@ export interface FetchPostsFailed {
   payload: string
 }
 
-export type TopListActionTypes = FetchPostsRequest | FetchPostsSuccess | FetchPostsFailed | RemovePost
+export type TopListActionTypes = FetchPostsRequest | FetchPostsSuccess | FetchPostsFailed | RemovePost | ReadPost

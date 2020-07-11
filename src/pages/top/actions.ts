@@ -4,12 +4,19 @@ import {
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_FAILED,
   REMOVE_POST,
+  READ_POST,
   FetchPostsRequest,
   FetchPostsSuccess,
   FetchPostsFailed,
   RemovePost,
+  ReadPost,
   PostsInterface
 } from './topList.types'
+
+export const readPost = (postId: string): ReadPost => ({
+  type: READ_POST,
+  payload: postId
+})
 
 export const removePost = (postId: string): RemovePost => ({
   type: REMOVE_POST,
@@ -34,7 +41,7 @@ export const fetchTopPosts = () => (dispatch) => {
   dispatch(fetchTopPostsRequest)
   
   axios
-    .get('https://www.reddit.com/top.json?limit=5')
+    .get('https://www.reddit.com/top.json?limit=10')
     .then((response) => {
       const posts = response.data.data.children
       
