@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import moment from 'moment'
-import { Placeholder } from '..'
-import { ReactComponent as DeleteIcon } from '../../assets/deleteIcon.svg'
+import { Placeholder, IconButton } from '..'
 
 interface PostProps {
   id?: string
@@ -14,8 +13,10 @@ interface PostProps {
   clicked?: boolean
   isLoading?: boolean
   imageLink?: string
-  onDeleteClick?: (string) => {}
-  onPostClick?: (string) => {}
+  onDeleteClick?: (postId?: string) => {}
+  onPostClick?: (postId?: string) => {}
+  onSave?: (postId?: string, imageLink?: string) => {}
+  imageBookmarked?: boolean
 }
 
 const Container = styled.div`
@@ -29,7 +30,7 @@ const Container = styled.div`
   margin-bottom: -1px;
   background-color: #ffffff;
 
-  :hover  {
+  :hover {
     border: thin solid black;
     z-index: 1;
   }
@@ -65,6 +66,10 @@ const PostAuthorInfo = styled.div`
   align-items: center;
 `
 
+const ButtonsContainer = styled.div`
+  display: flex;
+`
+
 const PostComponent: React.FC<PostProps> = ({
   createdTime = 0,
   title,
@@ -74,8 +79,10 @@ const PostComponent: React.FC<PostProps> = ({
   commentsNumber,
   clicked,
   onDeleteClick,
+  onSave,
   onPostClick,
   imageLink,
+  imageBookmarked,
   isLoading = false
 }) => {
   const handleDeleteClick = () => {
@@ -87,6 +94,12 @@ const PostComponent: React.FC<PostProps> = ({
   const handlePostClick = () => {
     if (onPostClick) {
       onPostClick(id)
+    }
+  }
+
+  const handleSave = () => {
+    if (onSave) {
+      onSave(id, imageLink)
     }
   }
 
@@ -108,8 +121,18 @@ const PostComponent: React.FC<PostProps> = ({
             <span>{`• Created ${moment.unix(createdTime).fromNow()} by ${author} - ${commentsNumber} Comments`}</span>
           )}
         </PostAuthorInfo>
+        <ButtonsContainer>
+          {onDeleteClick ? <IconButton label="Hide" iconName="ban" onClick={handleDeleteClick} /> : null}
+          {onSave ? (
+            <IconButton
+              color={imageBookmarked ? 'gold' : 'grey'}
+              label={imageBookmarked ? 'Remove from gallery' : 'Save to gallery'}
+              iconName="bookmark"
+              onClick={handleSave}
+            />
+          ) : null}
+        </ButtonsContainer>
       </PostInfo>
-      {onDeleteClick ? <DeleteIcon onClick={handleDeleteClick} /> : null}
     </Container>
   )
 }

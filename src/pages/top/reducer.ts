@@ -6,6 +6,8 @@ import {
   FETCH_POSTS_REQUEST,
   REMOVE_POST,
   READ_POST,
+  BOOKMARK_IMAGE,
+  UNBOOKMARK_IMAGE,
   TopListState,
   TopListActionTypes
 } from './topList.types'
@@ -18,7 +20,8 @@ const initialState: TopListState = {
     data: {}
   },
   removedPosts: [],
-  readPosts: []
+  readPosts: [],
+  bookmarkedImages: []
 }
 
 const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState, action) => {
@@ -41,6 +44,12 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
       state.readPosts.forEach((readPostId) => {
         if (postsData[readPostId]) {
           postsData[readPostId].clicked = true
+        }
+      })
+  
+      state.bookmarkedImages.forEach((image) => {
+        if (postsData[image.postId]) {
+          postsData[image.postId].imageBookmarked = true
         }
       })
       
@@ -89,6 +98,40 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
           }
         },
         readPosts: [...state.readPosts, action.payload]
+      }
+    }
+    
+    case BOOKMARK_IMAGE: {
+      return {
+        ...state,
+        posts: {
+          ...state.posts,
+          data: {
+            ...state.posts.data,
+            [action.payload.postId]: {
+              ...state.posts.data[action.payload.postId],
+              imageBookmarked: true
+            }
+          }
+        },
+        bookmarkedImages: [...state.bookmarkedImages, { ...action.payload }]
+      }
+    }
+    
+    case UNBOOKMARK_IMAGE: {
+      return {
+        ...state,
+        posts: {
+          ...state.posts,
+          data: {
+            ...state.posts.data,
+            [action.payload.postId]: {
+              ...state.posts.data[action.payload.postId],
+              imageBookmarked: false
+            }
+          }
+        },
+        bookmarkedImages: state.bookmarkedImages.filter(image => image.imageLink !== action.payload.imageLink)
       }
     }
 

@@ -12,7 +12,7 @@ const rootPersistConfig = {
 const topListPersistConfig = {
   key: 'topList',
   storage,
-  whitelist: ['readPosts', 'removedPosts']
+  whitelist: ['readPosts', 'removedPosts', 'bookmarkedImages']
 }
 
 const rootReducer = combineReducers({

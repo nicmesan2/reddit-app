@@ -45,6 +45,10 @@ const TopList = () => {
   const handleDeletePost = (postId) => dispatch(actions.removePost(postId))
 
   const handleReadPost = (postId) => dispatch(actions.readPost(postId))
+  
+  const handleBookmark = (postId, imageLink) => dispatch(actions.bookmarkImage(postId, imageLink))
+  
+  const handleUnbookmark = (postId, imageLink) => dispatch(actions.unbookmarkImage(postId, imageLink))
 
   const renderPostPlaceHolders = () =>
     Array(5)
@@ -55,7 +59,7 @@ const TopList = () => {
     <TransitionGroup className="todo-list">
       {visiblePosts.map((post) => (
         <CSSTransition classNames="post" timeout={200} key={post.id}>
-          <Post onPostClick={handleReadPost} onDeleteClick={handleDeletePost} {...post} />
+          <Post onSave={post.imageBookmarked ? handleUnbookmark : handleBookmark} onPostClick={handleReadPost} onDeleteClick={handleDeletePost} {...post} />
         </CSSTransition>
       ))}
     </TransitionGroup>
