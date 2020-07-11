@@ -16,7 +16,9 @@ const initialState: TopListState = {
   posts: {
     list: [],
     data: {}
-  }
+  },
+  removedPosts: [],
+  readPosts: []
 }
 
 const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState, action) => {
@@ -24,34 +26,50 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
     case FETCH_POSTS_REQUEST: {
       return initialState
     }
-    
+
     case FETCH_POSTS_SUCCESS: {
+      const postsData = { ...action.payload.data }
+      console.log(postsData, state.readPosts)
+
+      state.readPosts.forEach((readPostId) => {
+        if (postsData[readPostId]) {
+          postsData[readPostId].clicked = true
+        }
+      })
+      
       return {
+        ...state,
         isLoading: false,
         error: '',
-        posts: action.payload
+        posts: {
+          data: postsData,
+          list: action.payload.list.filter((postId) => !state.removedPosts.includes(postId))
+        }
       }
     }
-    
+
     case FETCH_POSTS_FAILED: {
       return {
+        ...state,
         isLoading: false,
         error: action.payload,
         posts: state.posts
       }
     }
-    
+
     case REMOVE_POST: {
       return {
         ...state,
         posts: {
           ...state.posts,
-          list: state.posts.list.filter(postId => postId !== action.payload)
-        }
+          list: state.posts.list.filter((postId) => postId !== action.payload)
+        },
+        removedPosts: [...state.removedPosts, action.payload]
       }
     }
-  
+
     case READ_POST: {
+      console.log(action.payload, state)
       return {
         ...state,
         posts: {
@@ -63,10 +81,11 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
               clicked: true
             }
           }
-        }
+        },
+        readPosts: [...state.readPosts, action.payload]
       }
     }
-    
+
     default: {
       return state
     }

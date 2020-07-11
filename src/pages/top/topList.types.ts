@@ -1,4 +1,5 @@
 export interface PostInterface {
+  clicked: boolean
   id: string
   createdTime: number
   author: string
@@ -15,6 +16,8 @@ export interface TopListState {
   isLoading: boolean
   posts: PostsInterface
   error: string
+  removedPosts: string[]
+  readPosts: string[]
 }
 
 export const FETCH_POSTS_REQUEST = '@top/FETCH_POST_REQUEST'

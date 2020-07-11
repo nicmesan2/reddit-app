@@ -1,9 +1,11 @@
 import React from 'react'
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { createGlobalStyle } from 'styled-components'
-import rootReducer from './reducers'
+import { persistStore, persistReducer } from 'redux-persist'
+import { PersistGate } from 'redux-persist/integration/react'
+import persistedReducer from './reducers'
 import { Header } from './components'
 import TopList from './pages/top/components/TopList.component'
 
@@ -24,16 +26,19 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function App() {
-  const store = createStore(rootReducer,undefined, applyMiddleware(thunk));
-  
+  const store = createStore(persistedReducer, undefined, applyMiddleware(thunk))
+  const persistor = persistStore(store)
+
   return (
     <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
       <GlobalStyle />
       <div className="App">
         <Header />
         <TopList />
       </div>
-    </ Provider>
+      </PersistGate>
+    </Provider>
   )
 }
 
