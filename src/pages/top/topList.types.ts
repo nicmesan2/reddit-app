@@ -28,6 +28,7 @@ export interface TopListState {
     postId: string
     image: ImageInterface
   }>
+  selectedPostId: string
 }
 
 export const FETCH_POSTS_REQUEST = '@top/FETCH_POST_REQUEST'
@@ -37,7 +38,13 @@ export const REMOVE_POST = '@top/REMOVE_POST'
 export const READ_POST = '@top/READ_POST'
 export const BOOKMARK_IMAGE = '@top/BOOKMARK_IMAGE'
 export const UNBOOKMARK_IMAGE = '@top/UNBOOKMARK_IMAGE'
+export const SELECT_POST = '@top/SELECT_POST'
 
+
+export interface SelectPost {
+  type: typeof SELECT_POST
+  payload: string
+}
 export interface BookmarkImage {
   type: typeof BOOKMARK_IMAGE,
   payload: { postId: string, image: ImageInterface}
@@ -71,4 +78,4 @@ export interface FetchPostsFailed {
   payload: string
 }
 
-export type TopListActionTypes = FetchPostsRequest | FetchPostsSuccess | FetchPostsFailed | RemovePost | ReadPost | BookmarkImage | UnbookmarkImage
+export type TopListActionTypes = FetchPostsRequest | FetchPostsSuccess | FetchPostsFailed | RemovePost | ReadPost | BookmarkImage | UnbookmarkImage | SelectPost

@@ -11,7 +11,7 @@ const PaginationComponent = (props) => {
     background-color: white;
     display: flex;
     justify-content: center;
-    border: thin solid #ccc;
+    border-top: thin solid #ccc;
     margin-top: 10px;
     font-size: 20px;
     padding: 5px 0;

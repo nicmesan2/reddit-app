@@ -7,13 +7,16 @@
 }
 .post-enter-active {
     opacity: 1;
-    transition: opacity 500ms ease-in;
-    transition-delay: 500ms;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+    /*transition: opacity 100ms ease-in;*/
 }
 .post-exit {
     opacity: 1;
 }
 .post-exit-active {
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+    /*transition: opacity 100ms ease-in;*/
 }

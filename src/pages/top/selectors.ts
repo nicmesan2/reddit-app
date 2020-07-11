@@ -6,6 +6,8 @@ const getPostsData = (state: RootState) => state.topList.posts.data
 
 export const getPostsList = (state: RootState) => state.topList.posts.list
 
+export const getPost = (state: RootState) => state.topList.posts.data[state.topList.selectedPostId]
+
 export const getPostData = createSelector<RootState, Record<string, PostInterface>, string[], PostInterface[]>(
   getPostsData,
   getPostsList,

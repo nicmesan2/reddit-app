@@ -21,8 +21,8 @@ interface PostProps {
 
 const Container = styled.div`
   cursor: pointer;
-  border-radius: 4px 4px 0 0;
-  border: thin solid #ccc;
+  border-top: thin solid #ccc;
+  border-bottom: thin solid #ccc;
   display: flex;
   position: relative;
   flex-direction: row;

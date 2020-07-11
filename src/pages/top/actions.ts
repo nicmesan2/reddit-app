@@ -7,6 +7,8 @@ import {
   READ_POST,
   BOOKMARK_IMAGE,
   UNBOOKMARK_IMAGE,
+  SELECT_POST,
+  SelectPost,
   FetchPostsRequest,
   FetchPostsSuccess,
   FetchPostsFailed,
@@ -18,9 +20,13 @@ import {
   PostsInterface
 } from './topList.types'
 
+export const selectPost = (postId: string): SelectPost => ({
+  type: SELECT_POST,
+  payload: postId
+})
 export const bookmarkImage = (postId: string, image: ImageInterface): BookmarkImage => ({
   type: BOOKMARK_IMAGE,
-  payload: { postId, image}
+  payload: { postId, image }
 })
 
 export const unbookmarkImage = (postId: string, image: ImageInterface): UnbookmarkImage => ({
@@ -56,7 +62,7 @@ export const fetchTopPosts = () => (dispatch) => {
   dispatch(fetchTopPostsRequest)
 
   axios
-    .get('https://www.reddit.com/top.json?limit=10')
+    .get('https://www.reddit.com/top.json?limit=50')
     .then((response) => {
       const posts = response.data.data.children
 
@@ -78,7 +84,6 @@ export const fetchTopPosts = () => (dispatch) => {
               thumbnailHeight: post.thumbnail_height,
               thumbnailWidth: post.thumbnail_width
             }
-            
           }
         }
       }, {})

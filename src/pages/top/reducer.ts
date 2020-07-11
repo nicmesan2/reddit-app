@@ -9,7 +9,7 @@ import {
   BOOKMARK_IMAGE,
   UNBOOKMARK_IMAGE,
   TopListState,
-  TopListActionTypes
+  TopListActionTypes, SELECT_POST
 } from './topList.types'
 
 const initialState: TopListState = {
@@ -21,7 +21,8 @@ const initialState: TopListState = {
   },
   removedPosts: [],
   readPosts: [],
-  bookmarkedImages: []
+  bookmarkedImages: [],
+  selectedPostId: ''
 }
 
 const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState, action) => {
@@ -84,7 +85,7 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
       }
     }
 
-    case READ_POST: {
+    case SELECT_POST: {
       return {
         ...state,
         posts: {
@@ -97,7 +98,8 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
             }
           }
         },
-        readPosts: [...state.readPosts, action.payload]
+        readPosts: [...state.readPosts, action.payload],
+        selectedPostId: action.payload
       }
     }
     
