@@ -3,6 +3,12 @@ import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist'
 import TopListReducer from './pages/top/reducer'
 
+const rootPersistConfig = {
+  key: 'root',
+  storage,
+  blacklist: ['topList']
+}
+
 const topListPersistConfig = {
   key: 'topList',
   storage,
@@ -15,4 +21,4 @@ const rootReducer = combineReducers({
 
 export type RootState = ReturnType<typeof rootReducer>
 
-export default persistReducer(topListPersistConfig, rootReducer)
+export default persistReducer(rootPersistConfig, rootReducer)
