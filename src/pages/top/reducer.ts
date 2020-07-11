@@ -22,7 +22,6 @@ const initialState: TopListState = {
 }
 
 const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState, action) => {
-  // console.log(state, action)
   switch (action.type) {
     case FETCH_POSTS_REQUEST: {
       return {
@@ -42,16 +41,6 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
       state.readPosts.forEach((readPostId) => {
         if (postsData[readPostId]) {
           postsData[readPostId].clicked = true
-        }
-      })
-      
-      console.log({
-        ...state,
-        isLoading: false,
-        error: '',
-        posts: {
-          data: postsData,
-          list: action.payload.list.filter((postId) => !state.removedPosts.includes(postId))
         }
       })
       
