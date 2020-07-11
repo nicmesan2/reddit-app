@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import moment from 'moment'
 import { Placeholder } from '..'
+import { ReactComponent as DeleteIcon } from '../../assets/deleteIcon.svg'
 
 interface PostProps {
+  id?: string
   createdTime?: number
   title?: string
   author?: string
@@ -11,6 +13,7 @@ interface PostProps {
   commentsNumber?: string
   clicked?: boolean
   isLoading?: boolean
+  onDeleteClick?: (string) => {}
 }
 
 const Container = styled.div`
@@ -79,12 +82,20 @@ const Comments = styled.div`
 const PostComponent: React.FC<PostProps> = ({
   createdTime = 0,
   title,
+  id,
   author,
   thumbnail,
   commentsNumber,
   clicked,
+  onDeleteClick,
   isLoading = false
 }) => {
+  const handleDeleteClick = () => {
+    if (onDeleteClick) {
+      onDeleteClick(id)
+    }
+  }
+
   return (
     <Container>
       {isLoading ? <Placeholder width={80} height={60} /> : <Thumbnail src={thumbnail} alt={title} />}
@@ -98,6 +109,7 @@ const PostComponent: React.FC<PostProps> = ({
           )}
         </PostAuthorInfo>
       </PostInfo>
+      {onDeleteClick ? <DeleteIcon onClick={handleDeleteClick} /> : null}
     </Container>
   )
 }

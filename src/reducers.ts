@@ -1,8 +1,10 @@
 import { combineReducers} from "redux"
 import TopListReducer from './pages/top/reducer'
 
-const appReducer = combineReducers({
+const rootReducer = combineReducers({
   topList: TopListReducer
 })
 
-export default appReducer
+export type RootState = ReturnType<typeof rootReducer>
+
+export default rootReducer
