@@ -13,6 +13,7 @@ interface PostProps {
   commentsNumber?: string
   clicked?: boolean
   isLoading?: boolean
+  imageLink?: string
   onDeleteClick?: (string) => {}
   onPostClick?: (string) => {}
 }
@@ -27,8 +28,8 @@ const Container = styled.div`
   padding: 8px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  
-  : hover {
+
+  :hover  {
     border: thin solid black;
     z-index: 1;
   }
@@ -48,7 +49,7 @@ const PostInfo = styled.div`
 
 const Title = styled.h3`
   font-size: 1.2rem;
-  color: ${props => props.clicked ? 'grey' : '#222222'};
+  color: ${(props) => (props.clicked ? 'grey' : '#222222')};
   display: inline;
   position: relative;
   text-decoration: none;
@@ -74,6 +75,7 @@ const PostComponent: React.FC<PostProps> = ({
   clicked,
   onDeleteClick,
   onPostClick,
+  imageLink,
   isLoading = false
 }) => {
   const handleDeleteClick = () => {
@@ -81,16 +83,22 @@ const PostComponent: React.FC<PostProps> = ({
       onDeleteClick(id)
     }
   }
-  
+
   const handlePostClick = () => {
     if (onPostClick) {
       onPostClick(id)
     }
   }
-  
+
   return (
     <Container onClick={handlePostClick}>
-      {isLoading ? <Placeholder width={80} height={60} /> : <Thumbnail src={thumbnail} alt={title} />}
+      {isLoading ? (
+        <Placeholder width={80} height={60} />
+      ) : (
+        <a href={imageLink} rel="noreferrer" target="_blank">
+          <Thumbnail src={thumbnail} alt={title} />
+        </a>
+      )}
       <PostInfo>
         {isLoading ? <Placeholder width={300} /> : <Title clicked={clicked}>{title}</Title>}
         <PostAuthorInfo>

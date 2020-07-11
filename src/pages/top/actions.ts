@@ -55,7 +55,8 @@ export const fetchTopPosts = () => (dispatch) => {
             author: post.author,
             thumbnail: post.thumbnail,
             commentsNumber: post.num_comments,
-            clicked: post.clicked
+            clicked: post.clicked,
+            imageLink: post.preview?.images[0]?.source?.url.replace('amp;', '')
           }
         }
       }, {})
