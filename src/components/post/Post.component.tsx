@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import moment from 'moment'
 import { Placeholder, IconButton } from '..'
 import { ImageInterface } from '../../pages/top/topList.types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faImage, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 interface PostProps {
   id?: string
@@ -42,6 +44,7 @@ const Thumbnail = styled.img`
   width: 80px;
 `
 const PostInfo = styled.div`
+  overflow: hidden;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -64,9 +67,25 @@ const PostAuthorInfo = styled.div`
   line-height: 16px;
   align-items: center;
 `
-
+const DefaultContainer = styled.div`
+  height: 60px;
+  width: 80px;
+  border: none;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #f1f2f3;
+`
 const ButtonsContainer = styled.div`
   display: flex;
+`
+
+const ArrowContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
 `
 
 const PostComponent: React.FC<PostProps> = ({
@@ -83,33 +102,39 @@ const PostComponent: React.FC<PostProps> = ({
   imageBookmarked,
   isLoading = false
 }) => {
-  const handleDeleteClick = e => {
+  const handleDeleteClick = (e) => {
     e.stopPropagation()
     if (onDeleteClick) {
       onDeleteClick(id)
     }
   }
 
-  const handlePostClick = e => {
+  const handlePostClick = (e) => {
     if (onPostClick) {
       onPostClick(id)
     }
   }
 
-  const handleSave = e => {
+  const handleSave = (e) => {
     e.stopPropagation()
     if (onSave) {
       onSave(id, image)
     }
   }
-  
+
+  const renderDefaultThumbnail = () => (
+    <DefaultContainer>
+      <FontAwesomeIcon style={{ color: '#ff4500' }} icon={faImage} />
+    </DefaultContainer>
+  )
+
   return (
     <Container onClick={handlePostClick}>
       {isLoading ? (
         <Placeholder width={80} height={60} />
       ) : (
         <a href={image?.src} rel="noreferrer" target="_blank">
-          <Thumbnail src={image?.thumbnail} alt={title} />
+          {(image?.thumbnail === 'default' || image?.thumbnail === 'self') ? renderDefaultThumbnail() : <Thumbnail src={image?.thumbnail} alt={title} />}
         </a>
       )}
       <PostInfo>
@@ -133,6 +158,9 @@ const PostComponent: React.FC<PostProps> = ({
           ) : null}
         </ButtonsContainer>
       </PostInfo>
+      <ArrowContainer>
+        <FontAwesomeIcon style={{ color: '#ff4500' }} icon={faAngleRight} />
+      </ArrowContainer>
     </Container>
   )
 }

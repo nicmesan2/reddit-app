@@ -8,6 +8,7 @@ const PaginationComponent = (props) => {
   const disabledClass = 'disabledClass'
   const activeLinkClass = 'activeLinkClass'
   const Wrapper = styled.div`
+    flex: 0;
     background-color: white;
     display: flex;
     justify-content: center;

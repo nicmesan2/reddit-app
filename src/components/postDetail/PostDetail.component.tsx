@@ -1,25 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
-  height: 100%;
+const Wrapper = styled.div`
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+`
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100%;
+`
+const Header = styled.div`
+  margin-bottom: 10px
 `
 
 const Image = styled.img`
-  height: 75%;
-  width: auto;
-  object-fit: cover;
+  object-fit: contain;
+  height: auto;
+  width: 80%;
+
+  @media only screen and (min-width: 64em) {
+    width: 50%;
+  }
 `
 const PostDetail = ({ title, imageSrc, user }) => (
-  <Container>
-    <h2>{title}</h2>
-    <p>{`by ${user}`}</p>
-    <Image src={imageSrc} />
-  </Container>
+  <Wrapper>
+    <Header>
+      <h2>{title}</h2>
+      <p>{`- by ${user}`}</p>
+    </Header>
+    <Container>
+      <Image src={imageSrc} />
+    </Container>
+  </Wrapper>
 )
 
 export default PostDetail

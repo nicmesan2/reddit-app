@@ -1,11 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 import { IconButton } from '../index'
 import { ReactComponent as LogoImage } from '../../assets/logo.svg'
 import { ReactComponent as LogoText } from '../../assets/textLogo.svg'
-import { Link } from 'react-router-dom'
 
 const Head = styled.header`
+  width: 100vw;
+  overflow: scroll;
   flex: 0;
   left: 0;
   position: fixed;
@@ -51,20 +53,10 @@ const HeaderComponent = (props) => (
       <StyledTextLogo />
       <LinksContainer>
         <Link to="/">
-        <IconButton
-          label="Top Posts"
-          iconName="chart"
-          color="#0079d3"
-          size={16}
-        />
+          <IconButton label="Top Posts" iconName="chart" color="#0079d3" size={16} />
         </Link>
         <Link to="/gallery">
-        <IconButton
-          label="Image Gallery"
-          iconName="camera"
-          color="#0079d3"
-          size={16}
-        />
+          <IconButton label="Image Gallery" iconName="camera" color="#0079d3" size={16} />
         </Link>
       </LinksContainer>
     </Container>

@@ -2,7 +2,7 @@ import React from 'react'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -32,6 +32,13 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
+const Container = styled.div`
+  width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+}
+`
+
 function App() {
   const store = createStore(persistedReducer, undefined, applyMiddleware(thunk))
   const persistor = persistStore(store)
@@ -41,7 +48,7 @@ function App() {
       <PersistGate loading={null} persistor={persistor}>
         <GlobalStyle />
         <Router>
-          <div className="App">
+          <Container>
             <Header />
             <Switch path="/gallery">
               <Route exact path="/">
@@ -54,7 +61,7 @@ function App() {
                 <NotFound />
               </Route>
             </Switch>
-          </div>
+          </Container>
         </Router>
       </PersistGate>
     </Provider>

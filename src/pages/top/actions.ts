@@ -67,6 +67,7 @@ export const fetchTopPosts = () => (dispatch) => {
       const posts = response.data.data.children
 
       const normalizedPosts = posts.reduce((acc, { data: post }) => {
+        console.log(post.title, post.preview?.images[0]?.source?.url)
         return {
           ...acc,
           [post.id]: {
