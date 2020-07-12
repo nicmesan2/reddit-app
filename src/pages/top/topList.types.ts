@@ -35,11 +35,15 @@ export const FETCH_POSTS_REQUEST = '@top/FETCH_POST_REQUEST'
 export const FETCH_POSTS_SUCCESS = '@top/FETCH_POST_SUCCESS'
 export const FETCH_POSTS_FAILED = '@top/FETCH_POST_FAILED'
 export const REMOVE_POST = '@top/REMOVE_POST'
+export const REMOVE_ALL = '@top/REMOVE_ALL'
 export const READ_POST = '@top/READ_POST'
 export const BOOKMARK_IMAGE = '@top/BOOKMARK_IMAGE'
 export const UNBOOKMARK_IMAGE = '@top/UNBOOKMARK_IMAGE'
 export const SELECT_POST = '@top/SELECT_POST'
 
+export interface RemoveAllPosts {
+  type: typeof REMOVE_ALL
+}
 
 export interface SelectPost {
   type: typeof SELECT_POST
@@ -55,10 +59,6 @@ export interface UnbookmarkImage {
   payload: { postId: string, image: ImageInterface}
 }
 
-export interface ReadPost {
-  type: typeof READ_POST,
-  payload: string
-}
 export interface RemovePost {
   type: typeof REMOVE_POST
   payload: string
@@ -78,4 +78,4 @@ export interface FetchPostsFailed {
   payload: string
 }
 
-export type TopListActionTypes = FetchPostsRequest | FetchPostsSuccess | FetchPostsFailed | RemovePost | ReadPost | BookmarkImage | UnbookmarkImage | SelectPost
+export type TopListActionTypes = FetchPostsRequest | FetchPostsSuccess | FetchPostsFailed | RemovePost | BookmarkImage | UnbookmarkImage | SelectPost | RemoveAllPosts

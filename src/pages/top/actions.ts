@@ -4,7 +4,7 @@ import {
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_FAILED,
   REMOVE_POST,
-  READ_POST,
+  REMOVE_ALL,
   BOOKMARK_IMAGE,
   UNBOOKMARK_IMAGE,
   SELECT_POST,
@@ -16,9 +16,13 @@ import {
   UnbookmarkImage,
   RemovePost,
   ImageInterface,
-  ReadPost,
+  RemoveAllPosts,
   PostsInterface
 } from './topList.types'
+
+export const removeAllPosts = (): RemoveAllPosts => ({
+  type: REMOVE_ALL
+})
 
 export const selectPost = (postId: string): SelectPost => ({
   type: SELECT_POST,
@@ -32,11 +36,6 @@ export const bookmarkImage = (postId: string, image: ImageInterface): BookmarkIm
 export const unbookmarkImage = (postId: string, image: ImageInterface): UnbookmarkImage => ({
   type: UNBOOKMARK_IMAGE,
   payload: { postId, image }
-})
-
-export const readPost = (postId: string): ReadPost => ({
-  type: READ_POST,
-  payload: postId
 })
 
 export const removePost = (postId: string): RemovePost => ({

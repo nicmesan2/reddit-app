@@ -5,11 +5,10 @@ import {
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_REQUEST,
   REMOVE_POST,
-  READ_POST,
   BOOKMARK_IMAGE,
   UNBOOKMARK_IMAGE,
   TopListState,
-  TopListActionTypes, SELECT_POST
+  TopListActionTypes, SELECT_POST, REMOVE_ALL
 } from './topList.types'
 
 const initialState: TopListState = {
@@ -82,6 +81,17 @@ const reducer: Reducer<TopListState, TopListActionTypes> = (state = initialState
           list: state.posts.list.filter((postId) => postId !== action.payload)
         },
         removedPosts: [...state.removedPosts, action.payload]
+      }
+    }
+    
+    case REMOVE_ALL: {
+      return {
+        ...state,
+        posts: {
+          ...state.posts,
+          list: []
+        },
+        removedPosts: [...state.removedPosts, ...state.posts.list]
       }
     }
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import moment from 'moment'
-import { Placeholder, IconButton } from '..'
-import { ImageInterface } from '../../pages/top/topList.types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { Placeholder, IconButton } from '..'
+import { ImageInterface } from '../../pages/top/topList.types'
 
 interface PostProps {
   id?: string
@@ -17,7 +17,7 @@ interface PostProps {
   image?: ImageInterface
   onDeleteClick?: (postId?: string) => {}
   onPostClick?: (postId?: string) => {}
-  onSave?: (postId?: string, image?: ImageInterface) => {}
+  onSave?: (postId?: string, image?: ImageInterface, imageBookmarked?: boolean) => {}
   imageBookmarked?: boolean
 }
 
@@ -109,7 +109,7 @@ const PostComponent: React.FC<PostProps> = ({
     }
   }
 
-  const handlePostClick = (e) => {
+  const handlePostClick = () => {
     if (onPostClick) {
       onPostClick(id)
     }
@@ -118,7 +118,7 @@ const PostComponent: React.FC<PostProps> = ({
   const handleSave = (e) => {
     e.stopPropagation()
     if (onSave) {
-      onSave(id, image)
+      onSave(id, image, imageBookmarked)
     }
   }
 

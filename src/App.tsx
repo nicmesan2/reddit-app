@@ -8,7 +8,7 @@ import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
 import persistedReducer from './reducers'
 import { Header } from './components'
-import TopList from './pages/top/components/TopList.component'
+import TopList from './pages/top/TopList.page'
 import Gallery from './pages/gallery/components/Gallery.component'
 import NotFound from './pages/notFound/components/NotFound.component'
 
