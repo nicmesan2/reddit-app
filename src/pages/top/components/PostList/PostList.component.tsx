@@ -39,7 +39,7 @@ const PostList: React.FC<TopListInterface> = ({ isLoading = false, posts, onClic
   return (
     <TransitionGroup>
       {posts.map((post) => (
-        <CSSTransition classNames="post" key={post.id}>
+        <CSSTransition timeout={200} classNames="post" key={post.id}>
           <Post onSave={onSave} onPostClick={onClick} onDeleteClick={onDelete} {...post} />
         </CSSTransition>
       ))}
