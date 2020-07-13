@@ -1,5 +1,7 @@
 # Reddit Top Post App
 
+[Running demo](https://polar-dawn-95175.herokuapp.com/)
+
 ## Running the app
 Start installing all dependencies using `npm install`
 
