@@ -52,7 +52,8 @@
     "prettier": "prettier --config .prettierrc --write 'src/**/*.{ts,tsx}'",
     "lint": "eslint src --ext .ts,.tsx",
     "ts:check": "tsc --noEmit",
-    "test": "react-scripts test",
+    "test": "react-scripts test --silent --watchAll=false",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
