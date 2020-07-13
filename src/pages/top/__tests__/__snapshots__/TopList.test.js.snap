@@ -1,0 +1,1019 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<DocumentFragment>
+  .c6 {
+  display: block;
+  width: 45px;
+  height: 16px;
+  border-radius: 30px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderAnimatedBackground;
+  animation-name: placeholderAnimatedBackground;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: #eee;
+  background: linear-gradient(to right,#eee 10%,#ddd 20%,#eee 35%);
+  background-size: 800px 100px;
+}
+
+.c5 {
+  cursor: pointer;
+  border-top: thin solid #ccc;
+  border-bottom: thin solid #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+}
+
+.c5:hover {
+  border: thin solid black;
+  z-index: 1;
+}
+
+.c7 {
+  overflow: hidden;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.c8 {
+  margin: 5px 0;
+  color: #787c7e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  color: grey;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 2px;
+  height: 25px;
+  margin-right: 4px;
+  padding-right: 4px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  width: auto;
+  word-break: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3:hover {
+  background-color: rgb(26,26,27,0.1);
+}
+
+.c0 {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh - 49px);
+  box-sizing: border-box;
+}
+
+.c1 {
+  max-width: 100%;
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+  overflow: scroll;
+  max-width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: thin solid #ccc;
+  -webkit-flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  background-color: white;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 {
+  padding: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: scroll;
+}
+
+.c13 {
+  border-left: 0;
+  border: thin solid #ccc;
+  box-sizing: border-box;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 0 70%;
+  -ms-flex: 1 0 70%;
+  flex: 1 0 70%;
+  overflow: scroll;
+  padding: 20px;
+  border-left: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c12 {
+  cursor: pointer;
+  width: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  border-bottom: thin solid #ccc;
+  border-top: thin solid #ccc;
+}
+
+.c12:hover {
+  color: #0078d3;
+}
+
+.c11 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-top: thin solid #ccc;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.c11 .innerClass {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c11 .itemClass {
+  padding: 0 8px;
+  background-color: white;
+}
+
+.c11 .itemClass a {
+  color: black;
+}
+
+.c11 .itemClass a:hover {
+  color: #ff4500;
+}
+
+.c11.c11 .activeLinkClass {
+  color: #ff4500;
+}
+
+.c11 .disabledClass a {
+  color: grey;
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    padding: 40px;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    -webkit-flex: 0 0 30%;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <button
+          class="c3"
+          color="grey"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-ban fa-w-16 "
+            data-icon="ban"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style="font-size: 12px; margin-right: 3px;"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 8C119.034 8 8 119.033 8 256s111.034 248 248 248 248-111.034 248-248S392.967 8 256 8zm130.108 117.892c65.448 65.448 70 165.481 20.677 235.637L150.47 105.216c70.204-49.356 170.226-44.735 235.638 20.676zM125.892 386.108c-65.448-65.448-70-165.481-20.677-235.637L361.53 406.784c-70.203 49.356-170.226 44.736-235.638-20.676z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            style="font-size: 12px;"
+          >
+            Hide All
+          </span>
+        </button>
+      </div>
+      <div
+        class="c4"
+      >
+        <div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              data-testid="Placeholder"
+              style="width: 80px; height: 60px; animation-delay: 0.22s;"
+            />
+            <div
+              class="c7"
+            >
+              <div
+                class="c6"
+                data-testid="Placeholder"
+                style="width: 300px; animation-delay: 0.22s;"
+              />
+              <div
+                class="c8"
+              >
+                <div
+                  class="c6"
+                  data-testid="Placeholder"
+                  style="width: 200px; animation-delay: 0.22s;"
+                />
+              </div>
+              <div
+                class="c9"
+              />
+            </div>
+            <div
+              class="c10"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-angle-right fa-w-8 "
+                data-icon="angle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style="color: rgb(255, 69, 0);"
+                viewBox="0 0 256 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c11"
+      >
+        <ul
+          class="innerClass"
+        >
+          <li
+            class="itemClass disabledClass"
+          >
+            <a
+              aria-label="Go to first page"
+              class=""
+              href="#"
+            >
+              «
+            </a>
+          </li>
+          <li
+            class="itemClass disabledClass"
+          >
+            <a
+              aria-label="Go to previous page"
+              class=""
+              href="#"
+            >
+              ⟨
+            </a>
+          </li>
+          <li
+            class="itemClass disabledClass"
+          >
+            <a
+              aria-label="Go to next page"
+              class=""
+              href="#"
+            >
+              ⟩
+            </a>
+          </li>
+          <li
+            class="itemClass disabledClass"
+          >
+            <a
+              aria-label="Go to last page"
+              class=""
+              href="#"
+            >
+              »
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c12"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-chevron-left fa-w-10 "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="c13"
+    >
+      <p>
+        Select a post
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
