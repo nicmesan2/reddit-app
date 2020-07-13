@@ -32,6 +32,7 @@ interface PlaceholderInterface {
 
 const PlaceholderComponent: React.FC<PlaceholderInterface> = ({ width = -1, height = -1 }) => (
   <Container
+    data-testid="Placeholder"
     style={{
       ...(width !== -1 && {
         width: `${width}px`
@@ -39,7 +40,7 @@ const PlaceholderComponent: React.FC<PlaceholderInterface> = ({ width = -1, heig
       ...(height !== -1 && {
         height: `${height}px`
       }),
-      animationDelay: `${(Math.random() / 4).toFixed(2)}s`
+      animationDelay: `0.22s`
     }}
   />
 )

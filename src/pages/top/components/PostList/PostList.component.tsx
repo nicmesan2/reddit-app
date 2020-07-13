@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { ImageInterface, PostInterface } from '../topList.types'
-import { Post } from '../../../components'
+import { ImageInterface, PostInterface } from '../../topList.types'
+import { Post } from '../../../../components'
 
 const Message = styled.div`
   display: flex;
@@ -12,14 +12,14 @@ const Message = styled.div`
 `
 
 interface TopListInterface {
-  isLoading: boolean
+  isLoading?: boolean
   posts: PostInterface[]
   onClick: (postId?: string) => {}
   onDelete: (postId?: string) => {}
   onSave: (postId?: string, image?: ImageInterface, imageBookmarked?: boolean) => {}
 }
 
-const TopList: React.FC<TopListInterface> = ({ isLoading, posts, onClick, onDelete, onSave }) => {
+const PostList: React.FC<TopListInterface> = ({ isLoading = false, posts, onClick, onDelete, onSave }) => {
   if (isLoading) {
     const mockedData = Array(12).fill({ isLoading: true })
 
@@ -39,7 +39,7 @@ const TopList: React.FC<TopListInterface> = ({ isLoading, posts, onClick, onDele
   return (
     <TransitionGroup>
       {posts.map((post) => (
-        <CSSTransition classNames="post" timeout={200} key={post.id}>
+        <CSSTransition classNames="post" key={post.id}>
           <Post onSave={onSave} onPostClick={onClick} onDeleteClick={onDelete} {...post} />
         </CSSTransition>
       ))}
@@ -47,4 +47,4 @@ const TopList: React.FC<TopListInterface> = ({ isLoading, posts, onClick, onDele
   )
 }
 
-export default TopList
+export default PostList

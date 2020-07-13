@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as actions from './topList.actions'
 import { getPaginatedPosts, getPostsList, getPost } from './selectors'
 import { Pagination, Button, PostDeatail, IconButton } from '../../components'
-import TopList from './components/TopList.component'
+import PostList from './components/PostList/PostList.component'
 import './styles.css'
 
 const Container = styled.div`
@@ -152,7 +152,7 @@ const TopListPage = () => {
           <IconButton onClick={handleRemoveAllPosts} iconName="ban" label="Hide All" />
         </DismissAllContainer>
         <TopListContainer>
-          <TopList
+          <PostList
             isLoading={isLoading}
             posts={visiblePosts}
             onClick={handlePostClick}

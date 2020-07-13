@@ -1,0 +1,769 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders bookmarked post 1`] = `
+<DocumentFragment>
+  .c6 {
+  color: gold;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 2px;
+  height: 25px;
+  margin-right: 4px;
+  padding-right: 4px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  width: auto;
+  word-break: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6:hover {
+  background-color: rgb(26,26,27,0.1);
+}
+
+.c0 {
+  cursor: pointer;
+  border-top: thin solid #ccc;
+  border-bottom: thin solid #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+}
+
+.c0:hover {
+  border: thin solid black;
+  z-index: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 80px;
+}
+
+.c2 {
+  overflow: hidden;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 1.2rem;
+  color: #222222;
+  display: inline;
+  position: relative;
+  word-break: break-word;
+}
+
+.c4 {
+  margin: 5px 0;
+  color: #787c7e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="c0"
+  >
+    <a
+      data-testid="Post_thumbnailLink"
+      href="https://preview.redd.it/rc6bq0lmxka51.jpg?auto=webp&s=25e97d99885da17754fdd65b7fcd984f9537eeb4"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="The music just sounds good"
+        class="c1"
+        src="https://b.thumbs.redditmedia.com/SfeqzrTADvsk0JxxSg9RPQPMMr-0eYNuF6hoMurYerQ.jpg"
+      />
+    </a>
+    <div
+      class="c2"
+    >
+      <h3
+        class="c3"
+        data-testid="Post_title"
+      >
+        The music just sounds good
+      </h3>
+      <div
+        class="c4"
+      >
+        <span>
+          • Created 10 hours ago by gamerking586 - 1156 Comments
+        </span>
+      </div>
+      <div
+        class="c5"
+      >
+        <button
+          class="c6"
+          color="gold"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-bookmark fa-w-12 "
+            data-icon="bookmark"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style="font-size: 12px; margin-right: 3px;"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            style="font-size: 12px;"
+          >
+            Remove from gallery
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c7"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-angle-right fa-w-8 "
+        data-icon="angle-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style="color: rgb(255, 69, 0);"
+        viewBox="0 0 256 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Renders clicked post 1`] = `
+<DocumentFragment>
+  .c6 {
+  color: grey;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 2px;
+  height: 25px;
+  margin-right: 4px;
+  padding-right: 4px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  width: auto;
+  word-break: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6:hover {
+  background-color: rgb(26,26,27,0.1);
+}
+
+.c0 {
+  cursor: pointer;
+  border-top: thin solid #ccc;
+  border-bottom: thin solid #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+}
+
+.c0:hover {
+  border: thin solid black;
+  z-index: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 80px;
+}
+
+.c2 {
+  overflow: hidden;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 1.2rem;
+  color: grey;
+  display: inline;
+  position: relative;
+  word-break: break-word;
+}
+
+.c4 {
+  margin: 5px 0;
+  color: #787c7e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="c0"
+  >
+    <a
+      data-testid="Post_thumbnailLink"
+      href="https://preview.redd.it/rc6bq0lmxka51.jpg?auto=webp&s=25e97d99885da17754fdd65b7fcd984f9537eeb4"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="The music just sounds good"
+        class="c1"
+        src="https://b.thumbs.redditmedia.com/SfeqzrTADvsk0JxxSg9RPQPMMr-0eYNuF6hoMurYerQ.jpg"
+      />
+    </a>
+    <div
+      class="c2"
+    >
+      <h3
+        class="c3"
+        data-testid="Post_title"
+      >
+        The music just sounds good
+      </h3>
+      <div
+        class="c4"
+      >
+        <span>
+          • Created 10 hours ago by gamerking586 - 1156 Comments
+        </span>
+      </div>
+      <div
+        class="c5"
+      >
+        <button
+          class="c6"
+          color="grey"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-bookmark fa-w-12 "
+            data-icon="bookmark"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style="font-size: 12px; margin-right: 3px;"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            style="font-size: 12px;"
+          >
+            Save to gallery
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c7"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-angle-right fa-w-8 "
+        data-icon="angle-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style="color: rgb(255, 69, 0);"
+        viewBox="0 0 256 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Renders loaded Post 1`] = `
+<DocumentFragment>
+  .c6 {
+  color: grey;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 2px;
+  height: 25px;
+  margin-right: 4px;
+  padding-right: 4px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  width: auto;
+  word-break: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6:hover {
+  background-color: rgb(26,26,27,0.1);
+}
+
+.c0 {
+  cursor: pointer;
+  border-top: thin solid #ccc;
+  border-bottom: thin solid #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+}
+
+.c0:hover {
+  border: thin solid black;
+  z-index: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 80px;
+}
+
+.c2 {
+  overflow: hidden;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 1.2rem;
+  color: #222222;
+  display: inline;
+  position: relative;
+  word-break: break-word;
+}
+
+.c4 {
+  margin: 5px 0;
+  color: #787c7e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="c0"
+  >
+    <a
+      data-testid="Post_thumbnailLink"
+      href="https://preview.redd.it/rc6bq0lmxka51.jpg?auto=webp&s=25e97d99885da17754fdd65b7fcd984f9537eeb4"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="The music just sounds good"
+        class="c1"
+        src="https://b.thumbs.redditmedia.com/SfeqzrTADvsk0JxxSg9RPQPMMr-0eYNuF6hoMurYerQ.jpg"
+      />
+    </a>
+    <div
+      class="c2"
+    >
+      <h3
+        class="c3"
+        data-testid="Post_title"
+      >
+        The music just sounds good
+      </h3>
+      <div
+        class="c4"
+      >
+        <span>
+          • Created 10 hours ago by gamerking586 - 1156 Comments
+        </span>
+      </div>
+      <div
+        class="c5"
+      >
+        <button
+          class="c6"
+          color="grey"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-bookmark fa-w-12 "
+            data-icon="bookmark"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style="font-size: 12px; margin-right: 3px;"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            style="font-size: 12px;"
+          >
+            Save to gallery
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c7"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-angle-right fa-w-8 "
+        data-icon="angle-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style="color: rgb(255, 69, 0);"
+        viewBox="0 0 256 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Renders loading Post 1`] = `
+<DocumentFragment>
+  .c1 {
+  display: block;
+  width: 45px;
+  height: 16px;
+  border-radius: 30px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderAnimatedBackground;
+  animation-name: placeholderAnimatedBackground;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: #eee;
+  background: linear-gradient(to right,#eee 10%,#ddd 20%,#eee 35%);
+  background-size: 800px 100px;
+}
+
+.c0 {
+  cursor: pointer;
+  border-top: thin solid #ccc;
+  border-bottom: thin solid #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+}
+
+.c0:hover {
+  border: thin solid black;
+  z-index: 1;
+}
+
+.c2 {
+  overflow: hidden;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.c3 {
+  margin: 5px 0;
+  color: #787c7e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+      data-testid="Placeholder"
+      style="width: 80px; height: 60px; animation-delay: 0.22s;"
+    />
+    <div
+      class="c2"
+    >
+      <div
+        class="c1"
+        data-testid="Placeholder"
+        style="width: 300px; animation-delay: 0.22s;"
+      />
+      <div
+        class="c3"
+      >
+        <div
+          class="c1"
+          data-testid="Placeholder"
+          style="width: 200px; animation-delay: 0.22s;"
+        />
+      </div>
+      <div
+        class="c4"
+      />
+    </div>
+    <div
+      class="c5"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-angle-right fa-w-8 "
+        data-icon="angle-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style="color: rgb(255, 69, 0);"
+        viewBox="0 0 256 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;

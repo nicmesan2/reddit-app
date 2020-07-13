@@ -126,21 +126,21 @@ const PostComponent: React.FC<PostProps> = ({
 
   const renderDefaultThumbnail = () => (
     <DefaultContainer>
-      <FontAwesomeIcon style={{ color: '#ff4500' }} icon={faImage} />
+      <FontAwesomeIcon data-testid="Post_defaultThumbnailIcon" style={{ color: '#ff4500' }} icon={faImage} />
     </DefaultContainer>
   )
-
+  
   return (
     <Container onClick={handlePostClick}>
       {isLoading ? (
         <Placeholder width={80} height={60} />
       ) : (
-        <a href={image?.src} rel="noreferrer" target="_blank">
+        <a data-testid="Post_thumbnailLink" href={image?.src} rel="noreferrer" target="_blank">
           {THUMBNAILS_SPECIFICS.includes(image?.thumbnail || '') ? renderDefaultThumbnail() : <Thumbnail src={image?.thumbnail} alt={title} />}
         </a>
       )}
       <PostInfo>
-        {isLoading ? <Placeholder width={300} /> : <Title clicked={clicked}>{title}</Title>}
+        {isLoading ? <Placeholder width={300} /> : <Title data-testid="Post_title" clicked={clicked}>{title}</Title>}
         <PostAuthorInfo>
           {isLoading ? (
             <Placeholder width={200} />
