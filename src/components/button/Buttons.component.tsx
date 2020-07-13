@@ -21,6 +21,12 @@ const StyledButton = styled.button`
     background-color: #7fbce9;
   }
 `
-const Button = ({ onClick, children }) => <StyledButton onClick={onClick}>{children}</StyledButton>
+
+interface ButtonPropsInterface {
+  onClick: () => {}
+  children: React.ReactNode
+}
+
+const Button: React.FC<ButtonPropsInterface> = ({ onClick, children }) => <StyledButton onClick={onClick}>{children}</StyledButton>
 
 export default Button

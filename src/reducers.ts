@@ -1,7 +1,7 @@
 import { combineReducers} from "redux"
 import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist'
-import TopListReducer from './pages/top/reducer'
+import TopListReducer from './pages/top/topList.reducer'
 
 const rootPersistConfig = {
   key: 'root',

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import styled from 'styled-components'
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as actions from './actions'
+import * as actions from './topList.actions'
 import { getPaginatedPosts, getPostsList, getPost } from './selectors'
-import { Post, Pagination, Button, PostDeatail, IconButton } from '../../components'
+import { Pagination, Button, PostDeatail, IconButton } from '../../components'
 import TopList from './components/TopList.component'
 import './styles.css'
 
@@ -113,6 +112,7 @@ const TopListPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Reset pagination when new posts are fetched
   useEffect(() => {
     setPagination((currentPagination) => ({ ...currentPagination, totalItemsCount: postList.length }))
   }, [postList])

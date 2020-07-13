@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { ImageInterface, PostInterface } from '../topList.types'
 import { Post } from '../../../components'
 
 const Message = styled.div`
@@ -9,7 +10,16 @@ const Message = styled.div`
   align-items: center;
   height: 100%;
 `
-const TopList = ({ isLoading, posts, onClick, onDelete, onSave }) => {
+
+interface TopListInterface {
+  isLoading: boolean
+  posts: PostInterface[]
+  onClick: (postId?: string) => {}
+  onDelete: (postId?: string) => {}
+  onSave: (postId?: string, image?: ImageInterface, imageBookmarked?: boolean) => {}
+}
+
+const TopList: React.FC<TopListInterface> = ({ isLoading, posts, onClick, onDelete, onSave }) => {
   if (isLoading) {
     const mockedData = Array(12).fill({ isLoading: true })
 

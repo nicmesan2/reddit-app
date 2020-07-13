@@ -102,6 +102,8 @@ const PostComponent: React.FC<PostProps> = ({
   imageBookmarked,
   isLoading = false
 }) => {
+  // Reddit sometime sends these strings as thumbnails
+  const THUMBNAILS_SPECIFICS = ['nsfw', 'default', 'self']
   const handleDeleteClick = (e) => {
     e.stopPropagation()
     if (onDeleteClick) {
@@ -134,7 +136,7 @@ const PostComponent: React.FC<PostProps> = ({
         <Placeholder width={80} height={60} />
       ) : (
         <a href={image?.src} rel="noreferrer" target="_blank">
-          {(image?.thumbnail === 'default' || image?.thumbnail === 'self') ? renderDefaultThumbnail() : <Thumbnail src={image?.thumbnail} alt={title} />}
+          {THUMBNAILS_SPECIFICS.includes(image?.thumbnail || '') ? renderDefaultThumbnail() : <Thumbnail src={image?.thumbnail} alt={title} />}
         </a>
       )}
       <PostInfo>

@@ -25,7 +25,12 @@ const Container = styled.div`
   }
 `
 
-const PlaceholderComponent = ({ width = -1, height = -1 }) => (
+interface PlaceholderInterface {
+  width?: number
+  height?: number
+}
+
+const PlaceholderComponent: React.FC<PlaceholderInterface> = ({ width = -1, height = -1 }) => (
   <Container
     style={{
       ...(width !== -1 && {

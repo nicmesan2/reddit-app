@@ -46,7 +46,7 @@ const StyledTextLogo = styled(LogoText)`
   ${logoStyle}
 `
 
-const HeaderComponent = (props) => (
+const HeaderComponent = () => (
   <Head>
     <Container>
       <StyledLogo />

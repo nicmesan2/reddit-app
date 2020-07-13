@@ -1,4 +1,4 @@
-import axios from 'axios'
+import TopListService from './topList.service'
 import {
   FETCH_POSTS_REQUEST,
   FETCH_POSTS_SUCCESS,
@@ -59,14 +59,12 @@ export const fetchTopPostsRequest = (): FetchPostsRequest => ({
 
 export const fetchTopPosts = () => (dispatch) => {
   dispatch(fetchTopPostsRequest)
-
-  axios
-    .get('https://www.reddit.com/top.json?limit=50')
+  
+  TopListService.getTopPosts()
     .then((response) => {
       const posts = response.data.data.children
 
       const normalizedPosts = posts.reduce((acc, { data: post }) => {
-        console.log(post.title, post.preview?.images[0]?.source?.url)
         return {
           ...acc,
           [post.id]: {

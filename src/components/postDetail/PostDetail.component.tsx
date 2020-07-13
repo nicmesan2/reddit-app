@@ -25,7 +25,14 @@ const Image = styled.img`
     width: 50%;
   }
 `
-const PostDetail = ({ title, imageSrc, user }) => (
+
+interface PostDetailInterface {
+  title: string
+  imageSrc: string
+  user: string
+}
+
+const PostDetail: React.FC<PostDetailInterface> = ({ title, imageSrc, user }) => (
   <Wrapper>
     <Header>
       <h2>{title}</h2>

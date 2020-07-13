@@ -28,7 +28,16 @@ const StyledButton = styled.button`
     background-color: rgb(26, 26, 27, 0.1);
   }
 `
-const Button = ({ onClick = (e) => {}, iconName, label, size = 12, color = 'grey' }) => (
+
+interface IconButtonPropsInterface {
+  onClick?: (any) => void
+  iconName: 'ban' | 'bookmark' | 'camera' | 'chart'
+  label?: string
+  color?: string
+  size?: number
+}
+
+const Button: React.FC<IconButtonPropsInterface> = ({ onClick = () => {}, iconName, label, size = 12, color = 'grey' }) => (
   <StyledButton color={color} onClick={onClick}>
     {iconName ? <FontAwesomeIcon style={{ fontSize: size, marginRight: 3 }} icon={iconsNames[iconName]} /> : null}
     <span style={{ fontSize: size }}>{label}</span>
