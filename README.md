@@ -34,3 +34,7 @@ To create a production build of the app use `npm run build`
 - Add more unit tests to the components on the `components` folder.
 - Add more integration tests to the pages and pages components.
 - Add Server Side Rendering for performance and SEO improvements.
+- New feature to allow "unhide" removed posts.
+- New feature allow to remove images from gallery.
+- New feature allow navigation (previous next post) from post detail section (specially for mobile).
+
