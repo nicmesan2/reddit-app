@@ -1,6 +1,6 @@
-#Reddit Top Post App
+# Reddit Top Post App
 
-##Running the app
+## Running the app
 Start installing all dependencies using `npm install`
 
 To run the app simply use `npm start`. This should compile a dev version of the code and start a dev server on port `3000`
@@ -13,7 +13,7 @@ To run the Typescript check use `npm run ts:check`
 
 To create a production build of the app use `npm run build`
 
-##Technologies used
+## Technologies used
 
 - React (UI library)
 - Redux (state management)
@@ -27,7 +27,7 @@ To create a production build of the app use `npm run build`
 - Eslint
 
 
-##Roadmap
+## Roadmap
 
 - Add more unit tests to the components on the `components` folder.
 - Add more integration tests to the pages and pages components.
